@@ -1,0 +1,33 @@
+/* Default Black Theme */
+:root {
+  --bg: #000000;
+}
+
+/* Grey Theme */
+[data-theme='grey'] {
+  --bg: #ccc;
+}
+
+/* White Theme */
+[data-theme='white'] {
+  --bg: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: Comfortaa, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
