@@ -1,7 +1,14 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="36px"
+    viewBox="0 0 24 24"
+    width="36px"
+    fill="currentColor"
+  >
+    <path d="M0 0h24v24H0z" fill="none" />
     <path
-      d="M14 36q-5 0-8.5-3.5T2 24q0-5 3.5-8.5T14 12h20q5 0 8.5 3.5T46 24q0 5-3.5 8.5T34 36Zm20.05-6.95q2.1 0 3.575-1.475T39.1 24q0-2.1-1.475-3.575T34.05 18.95q-2.1 0-3.575 1.475T29 24q0 2.1 1.475 3.575t3.575 1.475Z"
+      d="M17 7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h10c2.76 0 5-2.24 5-5s-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"
     />
   </svg>
 </template>

@@ -1,19 +1,21 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-
-// Change theme theme
-// document.documentElement.setAttribute('data-theme', 'white')
+import Sidebar from './components/general/Sidebar.vue'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/charts">Charts</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <div class="main-wrap">
+    <Sidebar />
+    <RouterView class="router-wrap" />
+  </div>
 </template>
+<style lang="scss">
+.main-wrap {
+  display: flex;
+}
+
+// .router-wrap {
+//   width: 100%;
+//   padding: 0.5rem 0.5rem 0.5rem 0;
+// }
+</style>

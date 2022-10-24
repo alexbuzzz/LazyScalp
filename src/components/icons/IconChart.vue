@@ -1,8 +1,14 @@
-<!-- This icon is from <https://github.com/Templarian/MaterialDesign>, distributed under Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0) license-->
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="36px"
+    viewBox="0 0 24 24"
+    width="36px"
+    fill="currentColor"
+  >
+    <path d="M0 0h24v24H0V0z" fill="none" />
     <path
-      d="M5.1 35.85q-.5-.5-.5-1.15 0-.65.5-1.15l12.8-12.8q.45-.45 1.05-.45.6 0 1.05.45l6.95 7 13.9-15.6q.4-.45 1.025-.5.625-.05 1.075.4.4.4.425 1 .025.6-.375 1.05L28 31.05q-.4.5-1.075.525-.675.025-1.125-.425l-6.85-6.85L7.4 35.85q-.5.5-1.15.5-.65 0-1.15-.5Z"
+      d="M4.2 17.78l5.3-5.3 3.25 3.25c.41.41 1.07.39 1.45-.04l7.17-8.07c.35-.39.33-.99-.04-1.37-.4-.4-1.07-.39-1.45.04l-6.39 7.18-3.29-3.29c-.39-.39-1.02-.39-1.41 0l-6.09 6.1c-.39.39-.39 1.02 0 1.41l.09.09c.39.39 1.03.39 1.41 0z"
     />
   </svg>
 </template>

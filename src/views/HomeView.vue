@@ -1,7 +1,5 @@
 <script setup lang="ts"></script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<template></template>
+
+<style scoped></style>

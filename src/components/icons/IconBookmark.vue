@@ -1,7 +1,12 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
-    <path
-      d="M12.1 41.1q-.75.35-1.425-.1Q10 40.55 10 39.75v-31q0-1.2.9-2.1.9-.9 2.1-.9h22q1.2 0 2.1.9.9.9.9 2.1v31q0 .8-.675 1.25-.675.45-1.425.1L24 36Z"
-    />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="36px"
+    viewBox="0 0 24 24"
+    width="36px"
+    fill="currentColor"
+  >
+    <path d="M0 0h24v24H0V0z" fill="none" />
+    <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" />
   </svg>
 </template>
