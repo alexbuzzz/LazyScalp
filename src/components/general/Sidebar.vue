@@ -4,62 +4,58 @@ import IconChart from '../icons/IconChart.vue'
 import IconHome from '../icons/IconHome.vue'
 import IconBookmarks from '../icons/IconBookmarks.vue'
 import IconSettings from '../icons/IconSettings.vue'
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-  <el-menu
-    background-color="--bg-color"
-    text-color="--text-color"
-    active-text-color="#47c173"
-    default-active="/"
-    class="el-menu-vertical"
-    :collapse="true"
-    router="true"
-  >
-    <el-menu-item class="menu-item" index="/">
-      <span><IconHome /></span>
-      <template #title>Home</template>
-    </el-menu-item>
+  <aside>
+    <div class="menu">
+      <router-link class="menu-item" to="/">
+        <span><IconHome /></span>
+      </router-link>
 
-    <el-menu-item index="cards">
-      <span><IconCards /></span>
-      <template #title>Cards</template>
-    </el-menu-item>
+      <router-link class="menu-item" to="/cards">
+        <span><IconCards /></span>
+      </router-link>
 
-    <el-menu-item index="charts">
-      <span><IconChart /></span>
-      <template #title>Charts</template>
-    </el-menu-item>
+      <router-link class="menu-item" to="/charts">
+        <span><IconChart /></span>
+      </router-link>
 
-    <el-menu-item index="bookmarks">
-      <span><IconBookmarks /></span>
-      <template #title>Bookmarks</template>
-    </el-menu-item>
+      <router-link class="menu-item" to="/favorites">
+        <span><IconBookmarks /></span>
+      </router-link>
 
-    <el-menu-item index="settings">
-      <span><IconSettings /></span>
-      <template #title>Settings</template>
-    </el-menu-item>
-  </el-menu>
+      <router-link class="menu-item" to="/settings">
+        <span><IconSettings /></span>
+      </router-link>
+    </div>
+  </aside>
 </template>
 
 <style lang="scss" scoped>
-.el-menu-vertical {
+.menu {
   min-width: 60px;
   min-height: 100vh;
-  border: none;
+  padding: 0.75rem;
 }
-.el-menu-item {
-  // color: var(--text-color);
-  background-color: var(--bg-color);
+.menu-item {
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
   height: 45px;
 
   span {
-    margin-left: -8px;
     transform: scale(0.8);
   }
 
   &:hover {
+    color: var(--text-hover-color);
+  }
+
+  &.router-link-active {
+    transition: 0.2s ease-out;
     color: var(--active-color);
   }
 }

@@ -1,21 +1,18 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import ModalWorkspace from './components/general/ModalWorkspace.vue'
 import Sidebar from './components/general/Sidebar.vue'
 </script>
 
 <template>
   <div class="main-wrap">
     <Sidebar />
-    <RouterView class="router-wrap" />
+    <ModalWorkspace />
+    <RouterView />
   </div>
 </template>
 <style lang="scss">
 .main-wrap {
   display: flex;
 }
-
-// .router-wrap {
-//   width: 100%;
-//   padding: 0.5rem 0.5rem 0.5rem 0;
-// }
 </style>

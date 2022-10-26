@@ -2,6 +2,8 @@
 import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { createChart } from 'lightweight-charts'
 import axios from 'axios'
+import store from '../../store'
+import IconBookmark from '../icons/IconBookmark.vue'
 
 const props = defineProps({
   chartDataParams: {
@@ -43,6 +45,17 @@ const chartData: any = ref({
 })
 
 const chartContainer = ref()
+
+const fitContent = () => {
+  if (!chart) return
+  chart.timeScale().fitContent()
+}
+
+const getChart = () => {
+  return chart
+}
+
+defineExpose({ fitContent, getChart })
 
 // Auto resizes the chart when the browser window is resized.
 const resizeHandler = () => {
@@ -201,6 +214,7 @@ onMounted(async () => {
     props?.chartDataParams?.interval,
     props?.chartDataParams?.candlesLimit
   )
+  chart.timeScale().fitContent()
 })
 
 onUnmounted(() => {
@@ -265,11 +279,57 @@ watch(
 </script>
 
 <template>
-  <div class="chart" ref="chartContainer"></div>
+  <div class="wrap">
+    <div class="head">
+      <span
+        class="ticker"
+        @click="store.commit('openWorkspace', props.chartTicker)"
+        >{{ props.chartTicker?.toString().slice(0, -4) }}</span
+      >
+      <button>Copy</button>
+      <button><IconBookmark /></button>
+    </div>
+    <div class="chart" ref="chartContainer"></div>
+  </div>
 </template>
 
-<style scoped>
-.chart {
-  height: 100%;
+<style lang="scss" scoped>
+.wrap {
+  .head {
+    background-color: var(--content);
+    display: flex;
+    justify-content: right;
+    position: relative;
+
+    .ticker {
+      position: absolute;
+      top: 0.25rem;
+      left: 0.25rem;
+      font-size: 2vw;
+      font-weight: bold;
+      opacity: 0.1;
+      z-index: 10;
+      cursor: pointer;
+
+      @media (max-width: 500px) {
+        font-size: 20px;
+        opacity: 0.2;
+      }
+
+      &:hover {
+        opacity: 0.15;
+      }
+    }
+
+    button {
+      color: var(--text-hover-color);
+      background: none;
+      border: none;
+    }
+  }
+
+  .chart {
+    height: 100%;
+  }
 }
 </style>
